@@ -70,7 +70,7 @@
         <div class="result">
           <div class="result-h">
             <h3>{{output.name}}</h3>
-            <h3 class="topp">Total Carbon emissions (CO2e) {{co2Value.value}}  </h3>
+            <h3 class="topp">Total Carbon emissions (CO2e)<b>  {{co2Value.value}} </b> </h3>
             <a href="/history/{{userId.value}}">History</a>
             <a href="/download">Genarate PDF</a>
           </div>
@@ -85,8 +85,14 @@
   </div>
 
 
+
+  
   </div>
   </div>
+    <div class="content1">
+</div>
+
+
 <script>
  document.getElementById("material").addEventListener("keydown", (event) => {
     const material = document.getElementById("material").value;
@@ -110,6 +116,10 @@
     }
     call();
 });
+
+
+
+
 
             </script>
 

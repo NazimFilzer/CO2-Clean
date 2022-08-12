@@ -223,3 +223,15 @@ form {
     border: 0px solid #fff;
     border-radius: 10px;
 }
+.content1{
+    display: flex;
+    position: relative;
+    top: 100%;
+    left: 4%;
+    align-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    background: #ddeff9;
+    border-radius: 20px;
+}
