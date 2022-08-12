@@ -39,7 +39,7 @@ router.post("/calculate", checkUser, async (req, res) => {
 
         });
         const data = await response.json();
-        const output = data.results[1]
+        const output = data.results[0]
         // console.log(output);
 
 
