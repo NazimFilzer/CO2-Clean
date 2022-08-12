@@ -200,6 +200,11 @@ nav {
 
 
 }
+.box-content a:hover{
+    filter: brightness(1.2);
+
+
+}
 
 .box-2 {
     width: 25%;
