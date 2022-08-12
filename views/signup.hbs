@@ -28,6 +28,23 @@
                 <a href="/about">How Co2 Generated</a>
             </div>
 
+            
+                {{#if userWhichWeSee}}
+                <div class="nav-button">
+                    <a href="/logout">Logout</a>
+                    {{else }}
+                    <div class="nav-button">
+                        <a href="/login">Login</a>
+                    </div> 
+                    <div class="nav-button">
+                        <a href="/signup">signup</a>
+                    </div>
+
+                    {{/if}}
+                </div>
+            
+
+
 
         </div>
     </nav>
@@ -35,14 +52,12 @@
         <div class="right-content">
             <div class="box">
                 <form action="">
-                    <h2>Sign up</h2>
+                    <h2>Sign up</h2> <br>
 
-                    <label for="email">Email</label>
-                    <input type="text" name="email" required>
+                    <input type="text" name="email" placeholder="Enter Email" required>
                     <div class="email error"></div>
 
-                    <label for="password">Password</label>
-                    <input type="password" name="password" required>
+                    <input type="password" name="password" placeholder="Enter password" required>
                     <div class="password error"></div>
                     <button>Sign Up</button>
 

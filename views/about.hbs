@@ -15,7 +15,7 @@
 
   <nav>
     <div class="nav-left">
-      <a href="/"> <img class="logo" src="/images/logo1.png"></a>
+      <a href="/"> <img class="logo" src="images/logo1.png"></a>
 
     </div>
     <div class="nav-right">
@@ -31,6 +31,20 @@
       </div>
 
 
+      {{#if userWhichWeSee}}
+      <div class="nav-button">
+        <a href="/logout">Logout</a>
+        {{else }}
+        <div class="nav-button">
+          <a href="/login">Login</a>
+        </div>
+        <div class="nav-button">
+          <a href="/signup">signup</a>
+        </div>
+
+        {{/if}}
+      </div>
+
     </div>
   </nav>
 
@@ -39,12 +53,14 @@
       <div class="box">
         <form action="">
           <h1>History</h1>
-         <h1>
-            Lorem ipsum dolor sit 
-         </h1>
-         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, corrupti. Minus id eos modi distinctio. Deserunt voluptatibus obcaecati repellendus. Alias nobis quasi cumque assumenda in recusandae officiis nisi, ipsum nemo.
-         </p>
+          <h1>
+            Lorem ipsum dolor sit
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, corrupti. Minus id eos modi
+            distinctio. Deserunt voluptatibus obcaecati repellendus. Alias nobis quasi cumque assumenda in recusandae
+            officiis nisi, ipsum nemo.
+          </p>
         </form>
       </div>
 
@@ -58,7 +74,7 @@
   </div>
   </div>
 
-  
+
 </body>
 
 </html>

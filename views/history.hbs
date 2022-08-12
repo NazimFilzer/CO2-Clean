@@ -13,26 +13,40 @@
 
   </div>
 
- <nav>
-    <div class="nav-left">
-      <a href="/"> <img class="logo" src="/images/logo1.png"></a>
+  <nav>
+        <div class="nav-left">
+            <a href="/"> <img class="logo" src="images/logo1.png"></a>
 
-    </div>
-    <div class="nav-right">
+        </div>
+        <div class="nav-right">
 
-      <div class="nav-button">
-        <a href="/">Home</a>
-      </div>
-      <div class="nav-button">
-        <a href="/calculate">Calculate</a>
-      </div>
-      <div class="nav-button">
-        <a href="/about">How Co2 Generated</a>
-      </div>
+            <div class="nav-button">
+                <a href="/">Home</a>
+            </div>
+            <div class="nav-button">
+                <a href="/calculate">Calculate</a>
+            </div>
+            <div class="nav-button">
+                <a href="/about">How Co2 Generated</a>
+            </div>
 
+            
+                {{#if userWhichWeSee}}
+                <div class="nav-button">
+                    <a href="/logout">Logout</a>
+                    {{else }}
+                    <div class="nav-button">
+                        <a href="/login">Login</a>
+                    </div> 
+                    <div class="nav-button">
+                        <a href="/signup">signup</a>
+                    </div>
 
-    </div>
-  </nav>
+                    {{/if}}
+                </div>
+            
+        </div>
+    </nav>
 
   <div class="content">
     <div class="right-content">
