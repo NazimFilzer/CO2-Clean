@@ -1,9 +1,13 @@
 const { Router, application } = require("express");
 const router = Router();
 const Emission = require("../models/Emission")
+const { requireAuth, checkUser } = require("../middleware/authMiddleware")
+
+// const { generatePdf } = require("../controllers/genaratePdf");
 
 
-router.get("/history/:userId", async (req, res) => {
+
+router.get("/history/:userId", requireAuth, async (req, res) => {
 
     const userId = req.params.userId
     try {
