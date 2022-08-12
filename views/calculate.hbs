@@ -41,10 +41,10 @@
     <div class="right-content">
       <div class="box">
         <form action="/calculate" method="post">
-          <h1><img src="images/calc-icon1.png"> Calculate</h1>
+          <h1><img src="images/calc-icon1.png"> Calculate CO2e</h1>
           <div class="box-ques">
             <div class="ques">
-              <p>The material: <strong id="material-placeholder"></strong> </p>
+              <p>Material: <strong id="material-placeholder"></strong> </p>
   
             </div>
             <input id="material" name="material" type="text" placeholder="Name of material">
@@ -78,7 +78,7 @@
               <h1>Result</h1>
 
           <div class="result-h">
-            <h3>NAme of material is {{output.name}}</h3>
+            <h3>Name of material is {{output.name}}</h3>
             <h3>Carbon footprint is {{co2Value.value}} </h3><br>
             <a href="/history/{{userId.value}}">History</a>
             <br><br>

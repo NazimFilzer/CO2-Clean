@@ -84,6 +84,17 @@ nav{
     background: #ffffff;
     border-radius: 20px;
 }
+.content5{
+    display: flex;
+    position: relative;
+    top:6%;
+    left: 4%;
+    align-content: center;
+    align-items: center;
+    width: 90%;
+    height: 75%;
+    border-radius: 20px;
+}
 .right-content{
     flex-basis: 100%;
     width: 100%;
@@ -114,6 +125,17 @@ nav{
     margin-top: 2vh;
     margin-bottom: 2vh;
     margin-left: 0%;
+
+}
+.box3{
+    background: #ff923e5d;
+    width: 100%;
+    margin-left:0%;
+    border-radius: 15px;
+    text-align: left;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 2%;
 
 }
 
@@ -198,3 +220,11 @@ table {
   }
   tr:hover {background-color: rgba(0, 15, 112, 0.278);}
   
+  .box8{
+    padding: 12px;
+    background: #fff;
+    text-align: left;
+    margin-top: 10px;
+    border-radius: 18px;
+
+  }

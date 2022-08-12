@@ -75,7 +75,7 @@ nav {
 }
 
 .nav-button:hover {
-    filter: brightness(1.5);
+    filter: brightness(1.2);
 }
 
 .nav-user-icon {
@@ -110,7 +110,7 @@ nav {
 }
 
 .right-content h2 {
-    font-size: 46px;
+    font-size: 40px;
     font-family: 'Montserrat', sans-serif;
     ;
 
@@ -213,6 +213,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 4vh;
+    margin-left: 14vh;
 
 }
