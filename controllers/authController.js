@@ -42,11 +42,11 @@ const createToken = (id) => {
 
 
 module.exports.signup_get = (req, res) => {
-    res.render("signup");
+    res.render("signup", { style: "login.css" });
 }
 
 module.exports.login_get = (req, res) => {
-    res.render("login");
+    res.render("login", { style: "login.css" });
 }
 
 module.exports.signup_post = async (req, res) => {
