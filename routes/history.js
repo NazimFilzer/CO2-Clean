@@ -12,7 +12,7 @@ router.get("/history/:userId", requireAuth, async (req, res) => {
     const userId = req.params.userId
     try {
         const data = await Emission.find({ userId })
-        res.render("history", { data })
+        res.render("history", { data ,style:"history.css"})
     } catch (error) {
         console.log(error);
     }

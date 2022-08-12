@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="../stylesheets/{{style}}">
 </head>
+
 <body>
+  <div class="bg1">
 
-    {{#each data}}
-    <p>Material :{{this.material}}</p>
-    <p>Co2 Emission :{{this.co2}}</p>
+  </div>
 
-    {{/each}}
-    <a href="{{path}}">Download</a>
+  <nav>
+    <div class="nav-left">
+      <a href="/"> <img class="logo" src="images/logo1.png"></a>
+
+    </div>
+    <div class="nav-right">
+
+      <div class="nav-button">
+        <a href="/">Home</a>
+      </div>
+      <div class="nav-button">
+        <a href="/calculate">Calculate</a>
+      </div>
+      <div class="nav-button">
+        <a href="/personal">How Co2 Generated</a>
+      </div>
+
+
+    </div>
+  </nav>
+
+  <div class="content">
+    <div class="right-content">
+      <div class="box">
+        <form action="">
+          <h1>History</h1>
+          <table border="1" cellpadding="5" cellspacing="5">
+        <tr class="h8">
+            <td>Name</td>
+            <td>PhoneNumber</td>
+            
+        </tr>
+
+        {{#each data}}
+        <tr>
+            <td>{{this.material}}</td>
+            <td>{{this.co2}}</td>
+            
+        </tr>
+        {{/each}}
+
+    </table>
+        </form>
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </div>
+  </div>
+
+  
 </body>
+
 </html>
