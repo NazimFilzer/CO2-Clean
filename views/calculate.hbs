@@ -12,10 +12,9 @@
   <div class="bg1">
 
   </div>
-
   <nav>
     <div class="nav-left">
-      <a href="/"> <img class="logo" src="/images/logo1.png"></a>
+      <a href="/"> <img class="logo" src="images/logo1.png"></a>
 
     </div>
     <div class="nav-right">
@@ -30,6 +29,20 @@
         <a href="/about">How Co2 Generated</a>
       </div>
 
+
+      {{#if userWhichWeSee}}
+      <div class="nav-button">
+        <a href="/logout">Logout</a>
+        {{else }}
+        <div class="nav-button">
+          <a href="/login">Login</a>
+        </div>
+        <div class="nav-button">
+          <a href="/signup">signup</a>
+        </div>
+
+        {{/if}}
+      </div>
 
     </div>
   </nav>
@@ -49,19 +62,20 @@
             </div>
             <input id="material" name="material" type="text" placeholder="Name of material">
             <div class="ques">
-            <p>Quantity: <strong id="weight-placeholder"></strong></p>
+              <p>Quantity: <strong id="weight-placeholder"></strong></p>
 
             </div>
             <input id="weight" name="weight" type="text" placeholder="weight">
             <div class="ques">
             </div>
             <div class="ques">
-             
-            <button id="submit" type="submit" name="button"><B>Calculate</B></button><a href="#res" class="show">Show Result</a>
-            <br><br>
-          </div>
+
+              <button id="submit" type="submit" name="button"><B>Calculate</B></button><a href="#res" class="show">Show
+                Result</a>
+              <br><br>
+            </div>
         </form>
-      
+
       </div>
 
 
@@ -72,10 +86,10 @@
 
   </div>
   </div>
-    <div class="content1" id="res">
-      <div class="result1">
-        <br>
-              <h1>Result</h1>
+  <div class="content1" id="res">
+    <div class="result1">
+      <br>
+      <h1>Result</h1>
 
           <div class="result-h">
             <h3>Name of material is {{output.name}}</h3>
@@ -85,34 +99,34 @@
             {{!-- <a href="/history/{{userId.value}}">Genarate PDF</a> --}}
           </div>
 
-</div>
+    </div>
 
 
-<script>
- document.getElementById("material").addEventListener("keydown", (event) => {
-    const material = document.getElementById("material").value;
-    const unitOutput = document.getElementById("weight");
-    const weightPlaceholder = document.getElementById("weight-placeholder")
-    const materialPlaceholder = document.getElementById("material-placeholder");
-    const dropdown = document.getElementById("dropdown");
-    async function call() {
-        const url = "https://beta3.api.climatiq.io/search?query=" + material;
-        const response = await fetch(url, {
+    <script>
+      document.getElementById("material").addEventListener("keydown", (event) => {
+        const material = document.getElementById("material").value;
+        const unitOutput = document.getElementById("weight");
+        const weightPlaceholder = document.getElementById("weight-placeholder")
+        const materialPlaceholder = document.getElementById("material-placeholder");
+        const dropdown = document.getElementById("dropdown");
+        async function call() {
+          const url = "https://beta3.api.climatiq.io/search?query=" + material;
+          const response = await fetch(url, {
             method: "GET",
             headers: {
-                Authorization: "Bearer " + "XZXDVM3S2G4KTYQVCV3MMM61GEKF",
+              Authorization: "Bearer " + "XZXDVM3S2G4KTYQVCV3MMM61GEKF",
             },
-        });
-        const data = await response.json();
-        const output = data.results;
-        unitOutput.placeholder = output[1].unit.substring(3);
-        materialPlaceholder.innerHTML = output[1].name;
-        weightPlaceholder.innerHTML = output[1].unit.substring(3);
-    }
-    call();
-});
+          });
+          const data = await response.json();
+          const output = data.results;
+          unitOutput.placeholder = output[1].unit.substring(3);
+          materialPlaceholder.innerHTML = output[1].name;
+          weightPlaceholder.innerHTML = output[1].unit.substring(3);
+        }
+        call();
+      });
 
-            </script>
+    </script>
 
 </body>
 

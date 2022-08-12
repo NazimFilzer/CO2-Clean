@@ -11,13 +11,13 @@ const { generatePdf } = require("../controllers/genaratePdf");
 
 
 
-router.get("/calculate", (req, res) => {
+router.get("/calculate", checkUser, (req, res) => {
 
     //Passing id to get History
     const userD = res.userInfo._id
     const userId = { value: userD }
 
-    res.render("calculate", { userId,style:"calculate.css" })
+    res.render("calculate", { userId, style: "calculate.css" })
 })
 
 
@@ -60,7 +60,7 @@ router.post("/calculate", checkUser, async (req, res) => {
         const userId = { value: userD }
 
 
-        res.render("calculate", { output, co2Value, userId,style:"calculate.css"})
+        res.render("calculate", { output, co2Value, userId, style: "calculate.css" })
 
     } catch (error) {
         console.log(error);
@@ -68,8 +68,8 @@ router.post("/calculate", checkUser, async (req, res) => {
 
 })
 
-router.get("/about",(req,res)=>{
-    res.render("about",{style:"history.css"})
+router.get("/about", (req, res) => {
+    res.render("about", { style: "history.css" })
 })
 
 // router.get("/download", generatePdf)

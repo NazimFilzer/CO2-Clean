@@ -15,7 +15,7 @@
 
   <nav>
     <div class="nav-left">
-      <a href="/"> <img class="logo" src="/images/logo1.png"></a>
+      <a href="/"> <img class="logo" src="images/logo1.png"></a>
 
     </div>
     <div class="nav-right">
@@ -30,6 +30,20 @@
         <a href="/about">How Co2 Generated</a>
       </div>
 
+
+      {{#if userWhichWeSee}}
+      <div class="nav-button">
+        <a href="/logout">Logout</a>
+        {{else }}
+        <div class="nav-button">
+          <a href="/login">Login</a>
+        </div>
+        <div class="nav-button">
+          <a href="/signup">signup</a>
+        </div>
+
+        {{/if}}
+      </div>
 
     </div>
   </nav>
@@ -85,7 +99,7 @@
   </div>
   </div>
 
-  
+
 </body>
 
 </html>
