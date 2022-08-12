@@ -68,6 +68,9 @@ router.post("/calculate", checkUser, async (req, res) => {
 
 })
 
+router.get("/about",(req,res)=>{
+    res.render("about",{style:"history.css"})
+})
 
 // router.get("/download", generatePdf)
 
