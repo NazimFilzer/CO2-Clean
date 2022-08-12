@@ -5,13 +5,13 @@ require("dotenv").config();
 const { requireAuth, checkUser } = require("../middleware/authMiddleware")
 const mongoose = require("mongoose");
 const Emission = require("../models/Emission")
+const { generatePdf } = require("../controllers/genaratePdf");
 // const ObjectId = require("mongodb").ObjectId
 
 
-// const { generatePdf } = require("../controller/genaratePdf");
 
 
-router.get("/calculate", requireAuth, (req, res) => {
+router.get("/calculate", (req, res) => {
 
     //Passing id to get History
     const userD = res.userInfo._id
@@ -69,6 +69,7 @@ router.post("/calculate", checkUser, async (req, res) => {
 })
 
 
+// router.get("/download", generatePdf)
 
 
 module.exports = router;

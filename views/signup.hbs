@@ -5,23 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/{{style}}">
+
     <title>Document</title>
 </head>
 
 <body>
-    <form action="">
-        <h2>Sign up</h2>
+    <nav>
+        <div class="nav-left">
+            <a href="/"> <img class="logo" src="images/logo1.png"></a>
 
-        <label for="email">Email</label>
-        <input type="text" name="email" required>
-        <div class="email error"></div>
+        </div>
+        <div class="nav-right">
 
-        <label for="password">Password</label>
-        <input type="password" name="password" required>
-        <div class="password error"></div>
-        <button>Sign Up</button>
+            <div class="nav-button">
+                <a href="/">Home</a>
+            </div>
+            <div class="nav-button">
+                <a href="/calculate">Calculate</a>
+            </div>
+            <div class="nav-button">
+                <a href="/personal">How Co2 Generated</a>
+            </div>
 
-    </form>
+
+        </div>
+    </nav>
+    <div class="content">
+        <div class="right-content">
+            <div class="box">
+                <form action="">
+                    <h2>Sign up</h2>
+
+                    <label for="email">Email</label>
+                    <input type="text" name="email" required>
+                    <div class="email error"></div>
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" required>
+                    <div class="password error"></div>
+                    <button>Sign Up</button>
+
+                </form>
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+    </div>
+
+
     <script>
         const form = document.querySelector('form');
         const emailError = document.querySelector(".email.error");
