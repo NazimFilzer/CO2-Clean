@@ -146,7 +146,7 @@ nav {
 }
 
 .ques p {
-    font-size: 2.5vh;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
@@ -162,6 +162,7 @@ nav {
 
 .box button {
     width: 45%;
+    font-size: 12px;
     background: #ff923e;
     border: none;
     padding: 10px 15px;
@@ -182,7 +183,7 @@ nav {
 }
 
 .result h3 {
-    font-size: 2.7vh;
+    font-size: 13px;
     padding: 2px;
     font-weight: 300;
 }
@@ -194,4 +195,43 @@ form {
 
 .result-h {
     padding: 3vh 5vh;
+}
+.result-h a{
+    font-size: 8px;
+    width: 45%;
+    background: #ff923e;
+    border: none;
+    padding: 8px 13px;
+    border-radius: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 300;
+}
+.topp{
+    margin-bottom: 5px;
+}
+#method{
+    width: 30%;
+    padding: 8px 15px;
+    border: 0px solid #fff;
+    border-radius: 10px;
+}
+.drop{
+    width: 30%;
+    padding: 8px 15px;
+    border: 0px solid #fff;
+    border-radius: 10px;
+}
+.content1{
+    display: flex;
+    position: relative;
+    top: 100%;
+    left: 4%;
+    align-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    background: #ddeff9;
+    border-radius: 20px;
 }

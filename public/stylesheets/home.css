@@ -22,7 +22,7 @@ a {
 }
 
 .bg {
-    background-image: url("images/bg.png");
+    background-image: url("/images/bg.png");
     height: 100%;
     width: 100%;
     background-position: center;
