@@ -1,0 +1,28 @@
+{
+  "name": "rajagiri-hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NazimFilzer/rajagiri-hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NazimFilzer/rajagiri-hackathon/issues"
+  },
+  "homepage": "https://github.com/NazimFilzer/rajagiri-hackathon#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.5.0",
+    "node-fetch": "^2.6.1",
+    "pdf-creator-node": "^2.3.4"
+  }
+}
