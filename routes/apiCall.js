@@ -2,18 +2,26 @@ const { Router, application } = require("express");
 const router = Router();
 const fetch = require("node-fetch");
 require("dotenv").config();
-// const mongoose = require("mongoose");
-// const Emission = require("../models/emission")
+const { requireAuth, checkUser } = require("../middleware/authMiddleware")
+const mongoose = require("mongoose");
+const Emission = require("../models/Emission")
+// const ObjectId = require("mongodb").ObjectId
+
+
 // const { generatePdf } = require("../controller/genaratePdf");
 
 
+router.get("/calculate", requireAuth, (req, res) => {
 
-router.get("/calculate", (req, res) => {
-    res.render("calculate")
+    //Passing id to get History
+    const userD = res.userInfo._id
+    const userId = { value: userD }
+
+    res.render("calculate", { userId })
 })
 
 
-router.post("/calculate", async(req, res) => {
+router.post("/calculate", checkUser, async (req, res) => {
     const query = req.body.material;
     const amount = req.body.weight;
     const unitType = req.body.unit;
@@ -32,7 +40,7 @@ router.post("/calculate", async(req, res) => {
         });
         const data = await response.json();
         const output = data.results[1]
-        console.log(output);
+        // console.log(output);
 
 
         const emissionValue = output.factor * amount;
@@ -40,11 +48,19 @@ router.post("/calculate", async(req, res) => {
         console.log(co2Value);
         const name = output.name;
 
-        // const saveing = new Emission({
-        //     material: name
-        // })
-        // saveing.save()
-        res.render("calculate", { output, co2Value })
+        const saveing = new Emission({
+            userId: res.userInfo._id,
+            material: name,
+            co2: emissionValue
+        })
+        saveing.save().then(console.log("doc Saved"))
+
+        //Passing id to get History
+        const userD = res.userInfo._id
+        const userId = { value: userD }
+
+
+        res.render("calculate", { output, co2Value, userId })
 
     } catch (error) {
         console.log(error);
