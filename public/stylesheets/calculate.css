@@ -171,7 +171,9 @@ nav {
     color: #ffffff;
     margin-top: 10px;
 }
-
+.box button:hover{
+    background: #d25b00;
+}
 .box-ques {}
 
 .result {
@@ -243,4 +245,19 @@ form {
     width: 100%;
     background: rgb(247 247 247);
 
+}
+.show{
+    text-decoration: none;
+    width: 45%;
+    font-size: 12px;
+    background: #ff923e;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.show:hover{
+    background: #d25b00;
 }
