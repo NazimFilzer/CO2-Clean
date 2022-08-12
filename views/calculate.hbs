@@ -61,13 +61,13 @@
               <option value="ar4">Ar4</option>
               <option value="ar5">Ar5</option>
             </select>
-            <button id="submit" type="submit" name="button">SEND MESSAGE</button>
+            <button id="submit" type="submit" name="button">Calculate</button>
           </div>
         </form>
         <div class="result">
           <div class="result-h">
-            <h3>NAme of material is {{output.name}}</h3>
-            <h3>Carbon footprint is {{co2Value.value}} </h3>
+            <h3>{{output.name}}</h3>
+            <h3>Total carbon emission (CO2e) {{co2Value.value}} kg</h3>
             <a href="/history/{{userId.value}}">History</a>
             <a href="/download">Genarate PDF</a>
           </div>
