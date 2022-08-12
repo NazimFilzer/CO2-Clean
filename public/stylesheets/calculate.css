@@ -118,6 +118,7 @@ nav {
     width: 100%;
     margin-top: 0px;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .right-content {
