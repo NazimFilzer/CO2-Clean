@@ -41,6 +41,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 5;
+    background: #f5efe6;
 
 }
 
@@ -81,8 +82,8 @@ nav {
 
 .content {
     display: flex;
-    position: fixed;
-    top: 16%;
+    position: relative;
+    top: 0%;
     left: 4%;
     align-content: center;
     align-items: center;
@@ -182,7 +183,7 @@ nav {
 
 }
 
-.result h3 {
+.result h3,.result1 h3 {
     font-size: 13px;
     padding: 2px;
     font-weight: 300;
@@ -201,7 +202,7 @@ form {
     width: 45%;
     background: #ff923e;
     border: none;
-    padding: 8px 13px;
+    padding: 10px 15px;
     border-radius: 20px;
     color: #ffffff;
     margin-top: 10px;
@@ -226,12 +227,20 @@ form {
 .content1{
     display: flex;
     position: relative;
-    top: 100%;
+    top: 5%;
     left: 4%;
     align-content: center;
     align-items: center;
     width: 90%;
-    height: 80%;
+    height: 30%;
     background: #ddeff9;
     border-radius: 20px;
+}
+.result1 {
+    background: #fff;
+    text-align: center;
+    border-radius: 2vh;
+    width: 100%;
+    background: rgb(247 247 247);
+
 }
