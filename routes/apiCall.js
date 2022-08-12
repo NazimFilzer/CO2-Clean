@@ -60,7 +60,7 @@ router.post("/calculate", checkUser, async (req, res) => {
         const userId = { value: userD }
 
 
-        res.render("calculate", { output, co2Value, userId })
+        res.render("calculate", { output, co2Value, userId,style:"calculate.css"})
 
     } catch (error) {
         console.log(error);

@@ -44,17 +44,23 @@
           <h1><img src="images/calc-icon1.png"> Calculate</h1>
           <div class="box-ques">
             <div class="ques">
-              <p>Q. Lorem ipsum dolor sit amet, consectetur adipiscing ?</p>
+              <p>Q. Enter the material </p>
+              <p id="material-placeholder"></p>
             </div>
-            <input id="material" name="material" type="text" placeholder="Name Of material">
+            <input id="material" name="material" type="text" placeholder="Name of material">
             <div class="ques">
-              <p>Q. Lorem ipsum dolor sit amet, consectetur adipiscing ?</p>
+              <p>Q. Enter the quantity</p>
+              <p id="weight-placeholder"></p>
+
             </div>
             <input id="weight" name="weight" type="text" placeholder="weight">
             <div class="ques">
-              <p>Q. Lorem ipsum dolor sit amet, consectetur adipiscing ?</p>
+              <p>Q. Calculation method</p>
             </div>
-            <input id="method" name="method" type="text" placeholder="method"><br>
+            <select name="method" id="method">
+              <option value="ar4">Ar4</option>
+              <option value="ar5">Ar5</option>
+            </select>
             <button id="submit" type="submit" name="button">SEND MESSAGE</button>
           </div>
         </form>
@@ -78,7 +84,31 @@
 
   </div>
   </div>
+<script>
+ document.getElementById("material").addEventListener("keydown", (event) => {
+    const material = document.getElementById("material").value;
+    const unitOutput = document.getElementById("weight");
+    const weightPlaceholder = document.getElementById("weight-placeholder")
+    const materialPlaceholder = document.getElementById("material-placeholder");
+    const dropdown = document.getElementById("dropdown");
+    async function call() {
+        const url = "https://beta3.api.climatiq.io/search?query=" + material;
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                Authorization: "Bearer " + "XZXDVM3S2G4KTYQVCV3MMM61GEKF",
+            },
+        });
+        const data = await response.json();
+        const output = data.results;
+        unitOutput.placeholder = output[1].unit.substring(3);
+        materialPlaceholder.innerHTML = output[1].name;
+        weightPlaceholder.innerHTML = output[1].unit.substring(3);
+    }
+    call();
+});
 
+            </script>
 
 </body>
 
