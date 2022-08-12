@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require('dotenv').config();
 const bodyParser = require("body-parser");
 const path = require('path');
 const mongoose = require("mongoose");
@@ -31,9 +32,12 @@ app.get("/",(req,res)=>{
     res.render("home")
 })
 
-mongoose.connect("mongodb://localhost:27017/Carbon", { useNewUrlParser: true }).then(
+mongoose.connect(process.env.DB, { useNewUrlParser: true }).then(
     console.log("DB Connected")
 );
+// mongoose.connect("mongodb://localhost:27017/Carbon", { useNewUrlParser: true }).then(
+//     console.log("DB Connected")
+// );
 
 
 app.listen(3000, () => {
