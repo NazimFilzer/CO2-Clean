@@ -119,9 +119,9 @@
           });
           const data = await response.json();
           const output = data.results;
-          unitOutput.placeholder = output[1].unit.substring(3);
-          materialPlaceholder.innerHTML = output[1].name;
-          weightPlaceholder.innerHTML = output[1].unit.substring(3);
+          unitOutput.placeholder = output[0].unit_type[0];
+          materialPlaceholder.innerHTML = output[0].name;
+          weightPlaceholder.innerHTML = output[0].unit.substring(3);
         }
         call();
       });
