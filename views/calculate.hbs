@@ -9,10 +9,20 @@
 </head>
 
 <body>
-    <h1>HI</h1>
+    <form action="/calculate" method="post">
+        <input id="material" name="material" type="text" placeholder="Name Of material"><br>
+        <input id="weight" name="weight" type="text" placeholder="weight"><br>
 
-    <form action="
-"></form>
+
+        <button id="submit" type="submit" name="button">SEND MESSAGE</button>
+
+        <div>
+            <h1>NAme of material is {{output.name}}</h1>
+            <h1>Carbon footprint is {{co2.value}}</h1>
+        </div>
+        <a href="/download">Genarate PDF</a>
+        <a href="">Report</a>
+    </form>
 
 </body>
 
