@@ -17,7 +17,7 @@ router.get("/calculate", requireAuth, (req, res) => {
     const userD = res.userInfo._id
     const userId = { value: userD }
 
-    res.render("calculate", { userId })
+    res.render("calculate", { userId,style:"calculate.css" })
 })
 
 

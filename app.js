@@ -8,7 +8,8 @@ const cookieParser= require("cookie-parser");
 const {requireAuth, checkUser}= require("./middleware/authMiddleware")
 const apiCall=require("./routes/apiCall");
 const auth = require("./routes/auth")
-const history=require("./routes/history")
+const history=require("./routes/history");
+const { homedir } = require("os");
 
 
 
@@ -29,7 +30,7 @@ app.use(auth)
 app.use(history)
 
 app.get("/",(req,res)=>{
-    res.render("home")
+    res.render("home",{style:"home.css"})
 })
 
 mongoose.connect(process.env.DB, { useNewUrlParser: true }).then(
